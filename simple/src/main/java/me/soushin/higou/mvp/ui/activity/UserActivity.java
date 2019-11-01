@@ -31,15 +31,11 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 import javax.inject.Inject;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import me.soushin.higou.R;
 import me.soushin.higou.base.app.base.BaseActivity;
-import me.soushin.higou.base.app.widget.TestPopup;
 import me.soushin.higou.di.component.DaggerUserComponent;
 import me.soushin.higou.mvp.contract.UserContract;
 import me.soushin.higou.mvp.presenter.UserPresenter;
-import timber.log.Timber;
-
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 
 
@@ -83,7 +79,7 @@ public class UserActivity extends BaseActivity<UserPresenter> implements UserCon
 
     @Override
     public void onRefresh() {
-        getMPresenter().requestUsers(true);
+        mPresenter.requestUsers(true);
     }
 
     /**

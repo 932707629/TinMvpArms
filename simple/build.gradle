@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
@@ -65,4 +67,5 @@ dependencies {
         exclude module: 'support-annotations'
     }
 
+    kapt rootProject.ext.dependencies["dagger2-compiler"]
 }
