@@ -83,7 +83,7 @@ public class UserActivity extends BaseActivity<UserPresenter> implements UserCon
 
     @Override
     public void onRefresh() {
-        mPresenter.requestUsers(true);
+        getMPresenter().requestUsers(true);
     }
 
     /**
