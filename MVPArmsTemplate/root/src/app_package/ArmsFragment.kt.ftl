@@ -3,14 +3,11 @@ package ${fragmentPackageName}
 import android.content.Intent
 import android.os.Bundle
 import android.os.Message
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.jess.arms.base.BaseFragment
 import com.jess.arms.di.component.AppComponent
-import com.jess.arms.utils.ArmsUtils
 
 import ${componentPackageName}.Dagger${pageName}Component
 import ${moudlePackageName}.${pageName}Module
@@ -101,23 +98,13 @@ class ${pageName}Fragment : BaseFragment<${pageName}Presenter>() , ${pageName}Co
 
     }
 
-    override fun showLoading() {
-
-    }
-
-    override fun hideLoading() {
-
-    }
-
-    override fun showMessage(message:String) {
-        ArmsUtils.snackbarText(message)
-    }
-
-    override fun launchActivity(intent:Intent) {
-        ArmsUtils.startActivity(intent)
+    override fun launchActivity(intent: Intent) {
+        super<BaseFragment>.launchActivity(intent)
     }
 
     override fun killMyself() {
-
+        super<BaseFragment>.killMyself()
     }
+
+
 }

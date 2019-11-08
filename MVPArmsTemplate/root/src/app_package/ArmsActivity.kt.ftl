@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 
 import com.jess.arms.di.component.AppComponent
-import com.jess.arms.utils.ArmsUtils
 
 import ${componentPackageName}.Dagger${pageName}Component
 import ${moudlePackageName}.${pageName}Module
@@ -48,6 +47,22 @@ class ${pageName}Activity : BaseActivity<${pageName}Presenter>() , ${pageName}Co
 
     override fun initData(savedInstanceState:Bundle?) {
 
+    }
+
+    override fun launchActivity(intent: Intent) {
+        super<BaseActivity>.launchActivity(intent)
+    }
+
+    override fun showLoading() {
+        super<BaseActivity>.showLoading()
+    }
+
+    override fun hideLoading() {
+        super<BaseActivity>.hideLoading()
+    }
+
+    override fun killMyself() {
+        super<BaseActivity>.killMyself()
     }
 
 }
