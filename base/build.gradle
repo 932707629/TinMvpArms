@@ -46,6 +46,7 @@ android {
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api rootProject.ext.dependencies["kotlinx-coroutines"]
     api rootProject.ext.dependencies["arms-image-loader"]
     api rootProject.ext.dependencies["arms"]
     api rootProject.ext.dependencies["immersionbar"]
@@ -64,10 +65,10 @@ dependencies {
     api rootProject.ext.dependencies["autosize"]
     api rootProject.ext.dependencies["androideventbus"]
     //test
-    testApi rootProject.ext.dependencies["junit"]
+    testImplementation rootProject.ext.dependencies["junit"]
     debugApi rootProject.ext.dependencies["canary-debug"]
     releaseApi rootProject.ext.dependencies["canary-release"]
-    testApi rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
 
 
 }

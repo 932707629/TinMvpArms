@@ -87,7 +87,7 @@ public class UserPresenter extends BasePresenter<UserContract.Model, UserContrac
      */
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     void onCreate() {
-        requestUsers(true);//打开 App 时自动加载列表
+//        requestUsers(true);//打开 App 时自动加载列表
 //        String data = "[1秒]11111111[2秒][1秒][0.5秒][0.2秒]1232432453453453435[0.2秒][0.2秒][0.2秒][0.2秒][0.2秒][0.2秒][0.2秒][0.2秒]";//    一二三四五[2s]是冻结as肯定就[3s]sdsdsada
 //        ALog.e("最终结果",dataFormat(data));
     }
