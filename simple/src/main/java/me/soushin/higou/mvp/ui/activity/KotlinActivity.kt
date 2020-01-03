@@ -38,6 +38,8 @@ class KotlinActivity : BaseActivity<KotlinPresenter>(), KotlinContract.View {
 
     override fun launchActivity(intent: Intent) {
         super<BaseActivity>.launchActivity(intent)
+
+
     }
 
     override fun showLoading() {
