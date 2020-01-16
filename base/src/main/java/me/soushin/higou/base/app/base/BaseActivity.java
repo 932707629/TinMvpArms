@@ -7,9 +7,12 @@ import com.hjq.toast.ToastUtils;
 import com.jess.arms.mvp.IPresenter;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
-
-public abstract class BaseActivity<P extends IPresenter> extends com.jess.arms.base.BaseActivity{
-
+/**
+ * 自定义的Activity基类
+ * @author Soushin
+ * @time 2019/12/26 11:23
+ */
+public abstract class BaseActivity<P extends IPresenter> extends com.jess.arms.base.BaseActivity<P>{
 
     public void showMessage(@NonNull String message) {
         checkNotNull(message);

@@ -2,6 +2,7 @@ package me.soushin.higou.mvp.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 
 import com.jess.arms.di.component.AppComponent
 
@@ -13,8 +14,31 @@ import me.soushin.higou.mvp.presenter.KotlinPresenter
 import me.soushin.higou.R
 import me.soushin.higou.base.app.base.BaseActivity
 
+
 /**
- * kotlin使用测试
+ * ================================================
+ * Description:
+ * <p>
+ * Created by MVPArmsTemplate on 12/26/2019 10:31
+ * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
+ * <a href="https://github.com/JessYanCoding">Follow me</a>
+ * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
+ * <a href="https://github.com/JessYanCoding/MVPArms/wiki">See me</a>
+ * <a href="https://github.com/JessYanCoding/MVPArmsTemplate">模版请保持更新</a>
+ * ================================================
+ */
+/**
+ * 如果没presenter
+ * 你可以这样写
+ *
+ * @ActivityScope(請注意命名空間) class NullObjectPresenterByActivity
+ * @Inject constructor() : IPresenter {
+ * override fun onStart() {
+ * }
+ *
+ * override fun onDestroy() {
+ * }
+ * }
  */
 class KotlinActivity : BaseActivity<KotlinPresenter>(), KotlinContract.View {
 
@@ -33,7 +57,11 @@ class KotlinActivity : BaseActivity<KotlinPresenter>(), KotlinContract.View {
     }
 
     override fun initData(savedInstanceState: Bundle?) {
+//        mPresenter?.requestUser()
+    }
 
+    fun onClicker(view: View) {
+        mPresenter?.download()
     }
 
     override fun launchActivity(intent: Intent) {
@@ -51,5 +79,6 @@ class KotlinActivity : BaseActivity<KotlinPresenter>(), KotlinContract.View {
     override fun killMyself() {
         super<BaseActivity>.killMyself()
     }
+
 
 }

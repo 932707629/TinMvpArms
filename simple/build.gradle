@@ -57,8 +57,9 @@ dependencies {
     implementation project(":base")
     //support
     implementation rootProject.ext.dependencies["cardview-x"]
-    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
-    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    kapt rootProject.ext.dependencies["arouter-compiler"]
+    kapt rootProject.ext.dependencies["dagger2-compiler"]
+//    kapt rootProject.ext.dependencies["dagger2-compiler"]
 //    implementation rootProject.ext.dependencies["progressmanager"]
 //    implementation rootProject.ext.dependencies["retrofit-url-manager"]
 //    implementation rootProject.ext.dependencies["lifecyclemodel"]
@@ -67,5 +68,4 @@ dependencies {
         exclude module: 'support-annotations'
     }
 
-    kapt rootProject.ext.dependencies["dagger2-compiler"]
 }

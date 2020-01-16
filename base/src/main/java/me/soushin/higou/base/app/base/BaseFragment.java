@@ -30,7 +30,7 @@ import io.reactivex.subjects.Subject;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 
-public abstract class BaseFragment<P extends IPresenter> extends com.jess.arms.base.BaseFragment
+public abstract class BaseFragment<P extends IPresenter> extends com.jess.arms.base.BaseFragment<P>
         implements ImmersionOwner {
 
     /**

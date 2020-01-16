@@ -9,7 +9,7 @@ import retrofit2.Call
  */
 class RetrofitCoroutineDSL<T> {
 
-    var api: (Call<ResultBean<T>>)? = null
+    var api: (Call<ResultBean<T>>) ?= null
     internal var onSuccess: ((T) -> Unit)? = null
         private set
     internal var onFail: ((msg: String, errorCode: Int) -> Unit)? = null

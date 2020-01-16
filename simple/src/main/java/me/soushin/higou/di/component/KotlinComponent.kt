@@ -13,7 +13,7 @@ import me.soushin.higou.mvp.ui.activity.KotlinActivity
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on 12/19/2019 17:55
+ * Created by MVPArmsTemplate on 12/26/2019 10:31
  * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
  * <a href="https://github.com/JessYanCoding">Follow me</a>
  * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
@@ -25,4 +25,7 @@ import me.soushin.higou.mvp.ui.activity.KotlinActivity
 @Component(modules = arrayOf(KotlinModule::class), dependencies = arrayOf(AppComponent::class))
 interface KotlinComponent {
     fun inject(activity: KotlinActivity)
+
+
+
 }

@@ -2,13 +2,19 @@ package me.soushin.higou.mvp.contract
 
 import com.jess.arms.mvp.IView
 import com.jess.arms.mvp.IModel
+import io.reactivex.Observable
+import io.reactivex.Observer
+import me.soushin.higou.base.app.network.kotlinNet.ResultBean
+import me.soushin.higou.mvp.model.entity.User
+import okhttp3.ResponseBody
+import retrofit2.Call
 
 
 /**
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on 12/19/2019 17:55
+ * Created by MVPArmsTemplate on 12/26/2019 10:31
  * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
  * <a href="https://github.com/JessYanCoding">Follow me</a>
  * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
@@ -21,6 +27,10 @@ interface KotlinContract {
     interface View : IView
 
     //Model层定义接口,外部只需关心Model返回的数据,无需关心内部细节,即是否使用缓存
-    interface Model : IModel
+    interface Model : IModel{
+        fun getUsers(lastIdQueried: Int, update: Boolean): Call<ResultBean<List<User>>>
+
+        fun download( url:String) :Observable<ResponseBody>
+    }
 
 }
