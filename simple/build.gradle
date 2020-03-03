@@ -13,7 +13,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "me.soushin.higou"
+        applicationId "me.soushin.tinmvparms"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]

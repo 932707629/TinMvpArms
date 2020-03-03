@@ -26,7 +26,7 @@ ext {
             //jessyan
             "arms-image-loader"            : "me.jessyan:arms-imageloader-glide:${version["armsSdkVersion"]}",
             "arms"                         : "me.jessyan:arms:${version["armsSdkVersion"]}",
-            "autosize"                     : "me.jessyan:autosize:1.1.2",
+            "autosize"                     : "me.jessyan:autosize:1.2.0",
             //androidx
             "cardview-x"                   : 'androidx.cardview:cardview:1.0.0',
 
@@ -64,7 +64,7 @@ ext {
             "nineoldandroids"              : "com.nineoldandroids:library:2.4.0",
             "paginate"                     : "com.github.markomilos:paginate:0.5.1",
             "vlayout"                      : "com.alibaba.android:vlayout:1.1.0@aar",
-            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47",
+            "BaseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50",
             "constraint-layout"            : 'androidx.constraintlayout:constraintlayout:1.1.3',
             "basepopup"                    : "com.github.razerdp:BasePopup:2.2.1",
             "rxpermissions2"               : "com.github.tbruyelle:rxpermissions:0.10.2",

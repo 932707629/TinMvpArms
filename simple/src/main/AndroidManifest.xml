@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.soushin.higou">
+    package="me.soushin.tinmvparms">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".mvp.ui.activity.KotlinActivity"
+            android:name="me.soushin.tinmvparms.mvp.ui.activity.KotlinActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -40,10 +40,10 @@
             android:name="design_height_in_dp"
             android:value="640" /> <!-- Arms 配置 -->
         <meta-data
-            android:name="me.soushin.higou.base.app.GlobalConfiguration"
+            android:name="me.soushin.tinmvparms.base.app.GlobalConfiguration"
             android:value="ConfigModule" />
         <meta-data
-            android:name="me.soushin.higou.app.GlobalConfiguration"
+            android:name="me.soushin.tinmvparms.app.GlobalConfiguration"
             android:value="ConfigModule" />
     </application>
 
