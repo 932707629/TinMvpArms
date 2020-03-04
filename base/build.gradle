@@ -48,9 +48,19 @@ dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api rootProject.ext.dependencies["kotlinx-coroutines"]
     api rootProject.ext.dependencies["arms-image-loader"]
-    api rootProject.ext.dependencies["arms"]
+    api (rootProject.ext.dependencies["arms"]){
+        exclude group: 'com.jakewharton', module: 'butterknife'
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+        exclude group: 'androidx.recyclerview', module: 'recyclerview'
+    }
+    api rootProject.ext.dependencies["appcompat"]
+    api rootProject.ext.dependencies["recyclerview"]
+    api rootProject.ext.dependencies["butterknife"]
+
     api rootProject.ext.dependencies["immersionbar"]
     api rootProject.ext.dependencies["immersionbar-components"]
+    api rootProject.ext.dependencies["immersionbar-ktx"]
+
     api rootProject.ext.dependencies["basepopup"]
     api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
     api rootProject.ext.dependencies["rxpermissions2"]

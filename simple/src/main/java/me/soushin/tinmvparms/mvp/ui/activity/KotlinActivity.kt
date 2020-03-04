@@ -3,8 +3,12 @@ package me.soushin.tinmvparms.mvp.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import butterknife.BindView
+import com.blankj.ALog
 
 import com.jess.arms.di.component.AppComponent
+import kotlinx.android.synthetic.main.activity_kotlin.*
 
 import me.soushin.tinmvparms.di.component.DaggerKotlinComponent
 import me.soushin.tinmvparms.di.module.KotlinModule
@@ -13,7 +17,6 @@ import me.soushin.tinmvparms.mvp.presenter.KotlinPresenter
 
 import me.soushin.tinmvparms.R
 import me.soushin.tinmvparms.base.app.base.BaseActivity
-
 
 /**
  * ================================================
@@ -51,13 +54,14 @@ class KotlinActivity : BaseActivity<KotlinPresenter>(), KotlinContract.View {
                 .inject(this)
     }
 
-
     override fun initView(savedInstanceState: Bundle?): Int {
         return R.layout.activity_kotlin //如果你不需要框架帮你设置 setContentView(id) 需要自行设置,请返回 0
     }
 
     override fun initData(savedInstanceState: Bundle?) {
 //        mPresenter?.requestUser()
+        //kotlin中使用butterknife不用注解  直接用id才做即可
+        ALog.e("判断BUTTON是否成功引入",btn_download!=null)
     }
 
     fun onClicker(view: View) {

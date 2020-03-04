@@ -51,7 +51,6 @@ constructor(model: KotlinContract.Model, rootView: KotlinContract.View) :
         super.onDestroy();
     }
 
-
     fun requestUser(){
         retrofit<List<User>> {
             api= mModel.getUsers(1,true)
@@ -71,13 +70,12 @@ constructor(model: KotlinContract.Model, rootView: KotlinContract.View) :
                 .subscribeOn(Schedulers.io())
                 .map {
                     val ios=it.byteStream()
-                    var fos:FileOutputStream ?=null
-                    var path=mApplication.cacheDir.absolutePath+"/支付宝授权函.docx"
+                    val path=mApplication.cacheDir.absolutePath+"/支付宝授权函.docx"
 
                     val file =File(path)
                     file.createNewFile()
 
-                    fos=FileOutputStream(file)
+                    val fos=FileOutputStream(file)
 
                     val byte= ByteArray(1024)
                     var len=0

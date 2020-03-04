@@ -32,8 +32,8 @@ public class AppLifecyclesImpl implements AppLifecycles {
     @Override
     public void onCreate(@NonNull Application application) {
         if (BuildConfig.LOG_DEBUG) {//Timber初始化
-            ButterKnife.setDebug(true);
             Timber.plant(new Timber.DebugTree());
+            ButterKnife.setDebug(true);
         }
         initALog(application);
         ToastUtils.init(application, new ToastStyle());

@@ -57,8 +57,10 @@ dependencies {
     implementation project(":base")
     //support
     implementation rootProject.ext.dependencies["cardview-x"]
+
     kapt rootProject.ext.dependencies["arouter-compiler"]
     kapt rootProject.ext.dependencies["dagger2-compiler"]
+
 //    kapt rootProject.ext.dependencies["dagger2-compiler"]
 //    implementation rootProject.ext.dependencies["progressmanager"]
 //    implementation rootProject.ext.dependencies["retrofit-url-manager"]
