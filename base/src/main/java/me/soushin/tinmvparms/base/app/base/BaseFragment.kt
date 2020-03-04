@@ -20,9 +20,6 @@ abstract class BaseFragment<P : IPresenter> : com.jess.arms.base.BaseFragment<P>
      */
     private val mImmersionProxy = ImmersionProxy(this)
 
-    val `this`: Context
-        get() = mContext
-
     override fun onDestroy() {
         super.onDestroy()
         mImmersionProxy.onDestroy()
@@ -101,6 +98,10 @@ abstract class BaseFragment<P : IPresenter> : com.jess.arms.base.BaseFragment<P>
 
     }
 
+    fun getThis(): Context {
+        return mContext
+    }
+
     fun showMessage(message: String) {
         checkNotNull(message)
         ToastUtils.show(message)
@@ -112,7 +113,7 @@ abstract class BaseFragment<P : IPresenter> : com.jess.arms.base.BaseFragment<P>
     }
 
     fun goActivity(clazz: Class<*>) {
-        startActivity(Intent(`this`, clazz))
+        startActivity(Intent(getThis(), clazz))
     }
 
     fun killMyself() {

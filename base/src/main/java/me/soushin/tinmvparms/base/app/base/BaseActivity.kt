@@ -45,4 +45,11 @@ abstract class BaseActivity<P : IPresenter> : com.jess.arms.base.BaseActivity<P>
         finish()
     }
 
+    /**
+     * 默认不使用EventBus
+     */
+    override fun useEventBus(): Boolean {
+        return false
+    }
+
 }
