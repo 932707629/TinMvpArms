@@ -98,25 +98,25 @@ abstract class BaseFragment<P : IPresenter> : com.jess.arms.base.BaseFragment<P>
 
     }
 
-    fun getThis(): Context {
+    open fun getThis(): Context {
         return mContext
     }
 
-    fun showMessage(message: String) {
+    open fun showMessage(message: String) {
         checkNotNull(message)
         ToastUtils.show(message)
     }
 
-    fun launchActivity(intent: Intent) {
+    open fun launchActivity(intent: Intent) {
         checkNotNull(intent)
         startActivity(intent)
     }
 
-    fun goActivity(clazz: Class<*>) {
+    open fun goActivity(clazz: Class<*>) {
         startActivity(Intent(getThis(), clazz))
     }
 
-    fun killMyself() {
+    open fun killMyself() {
         AppManager.getAppManager().topActivity?.finish()
     }
 
