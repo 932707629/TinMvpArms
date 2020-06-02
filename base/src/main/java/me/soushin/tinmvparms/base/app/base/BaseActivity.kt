@@ -16,7 +16,7 @@ import com.jess.arms.utils.Preconditions.checkNotNull
  */
 abstract class BaseActivity<P : IPresenter> : com.jess.arms.base.BaseActivity<P>() {
 
-    val `this`: Context
+    val `this`: BaseActivity<*>
         get() = this
 
     fun showMessage(message: String) {
