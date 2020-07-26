@@ -38,6 +38,7 @@
             android:name="me.soushin.tinmvparms.app.GlobalConfiguration"
             android:value="ConfigModule" />
     </application>
+
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />

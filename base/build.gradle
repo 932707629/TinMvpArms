@@ -28,7 +28,10 @@ android {
         versionName rootProject.ext.android["versionName"]
         testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
     }
-
+    buildFeatures{
+        dataBinding=false
+        viewBinding=true
+    }
     buildTypes {
         debug {
             buildConfigField "boolean", "LOG_DEBUG", "true"
@@ -51,7 +54,7 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api rootProject.ext.dependencies["kotlinstdlibjdk7"]
     api rootProject.ext.dependencies["kotlinx-coroutines"]
     api rootProject.ext.dependencies["arms-image-loader"]
     api (rootProject.ext.dependencies["arms"]){
