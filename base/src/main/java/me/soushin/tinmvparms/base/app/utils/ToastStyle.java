@@ -58,7 +58,7 @@ public class ToastStyle implements IToastStyle {
     }
 
     @Override
-    public int getPaddingLeft() {
+    public int getPaddingStart() {
         return 20;
     }
 
@@ -68,8 +68,8 @@ public class ToastStyle implements IToastStyle {
     }
 
     @Override
-    public int getPaddingRight() {
-        return getPaddingLeft();
+    public int getPaddingEnd() {
+        return getPaddingStart();
     }
 
     @Override
