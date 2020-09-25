@@ -35,8 +35,7 @@ import ${packageName}.R
 class ${pageName}Fragment : BaseFragment<${pageName}Presenter>() , ${pageName}Contract.View{
     companion object {
     fun newInstance():${pageName}Fragment {
-        val fragment = ${pageName}Fragment()
-        return fragment
+        return ${pageName}Fragment()
     }
     }
 

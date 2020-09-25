@@ -28,8 +28,7 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
 public class ${pageName}Fragment extends BaseFragment<${pageName}Presenter> implements ${pageName}Contract.View{
 
     public static ${pageName}Fragment newInstance() {
-        ${pageName}Fragment fragment = new ${pageName}Fragment();
-        return fragment;
+        return new ${pageName}Fragment();
     }
 
     @Override
@@ -93,30 +92,4 @@ public class ${pageName}Fragment extends BaseFragment<${pageName}Presenter> impl
 
     }
 
-    @Override
-    public void showLoading() {
-
-    }
-
-    @Override
-    public void hideLoading() {
-
-    }
-
-    @Override
-    public void showMessage(@NonNull String message) {
-        checkNotNull(message);
-        ArmsUtils.snackbarText(message);
-    }
-
-    @Override
-    public void launchActivity(@NonNull Intent intent) {
-        checkNotNull(intent);
-        ArmsUtils.startActivity(intent);
-    }
-
-    @Override
-    public void killMyself() {
-
-    }
 }
